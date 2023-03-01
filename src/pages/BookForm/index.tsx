@@ -1,4 +1,4 @@
-import React, { FormEvent } from 'react';
+import React, { useState, FormEvent } from 'react';
 
 import { FiPlus, FiClipboard, FiUser } from 'react-icons/fi';
 
@@ -19,6 +19,10 @@ import {
 } from './styles';
 
 const Home = () => {
+  const [title, setTitle] = useState<string>()
+  const [author, setAuthor] = useState<string>()
+  const [status, setStatus] = useState<string>()  
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     
@@ -54,6 +58,16 @@ const Home = () => {
               <InputContainer>
                 <Input
                   placeholder="Autor"
+                // onChange={(e) => setTweet(e.target.value)}
+                // value={tweet}
+                />
+                <div>
+                  <FiUser size={20} color="#BDBDBD" />
+                </div>
+              </InputContainer>
+              <InputContainer>
+                <Input
+                  placeholder="Status"
                 // onChange={(e) => setTweet(e.target.value)}
                 // value={tweet}
                 />
