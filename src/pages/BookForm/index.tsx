@@ -48,8 +48,8 @@ const Home = () => {
               <InputContainer>
                 <Input
                   placeholder="Título"
-                // onChange={(e) => setTweet(e.target.value)}
-                // value={tweet}
+                  defaultValue={title}
+                  onBlur={e => setTitle(e.target.value)}
                 />
                 <div>
                   <FiClipboard size={20} color="#BDBDBD" />
@@ -58,8 +58,8 @@ const Home = () => {
               <InputContainer>
                 <Input
                   placeholder="Autor"
-                // onChange={(e) => setTweet(e.target.value)}
-                // value={tweet}
+                  defaultValue={author}
+                  onBlur={e => setAuthor(e.target.value)}
                 />
                 <div>
                   <FiUser size={20} color="#BDBDBD" />
@@ -68,8 +68,8 @@ const Home = () => {
               <InputContainer>
                 <Input
                   placeholder="Status"
-                // onChange={(e) => setTweet(e.target.value)}
-                // value={tweet}
+                  defaultValue={starus}
+                  onBlur={e => setStatus(e.target.value)}
                 />
                 <div>
                   <FiUser size={20} color="#BDBDBD" />
