@@ -1,5 +1,7 @@
 import React, { useState, FormEvent } from 'react';
 
+import api from '../../services/api';
+
 import { FiPlus, FiClipboard, FiUser } from 'react-icons/fi';
 
 import Bookshelf from '../../assets/bookshelf.png';
@@ -68,7 +70,7 @@ const Home = () => {
               <InputContainer>
                 <Input
                   placeholder="Status"
-                  defaultValue={starus}
+                  defaultValue={status}
                   onBlur={e => setStatus(e.target.value)}
                 />
                 <div>
